@@ -1,17 +1,44 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], b[0]));
-        LinkedList<int[]> merged = new LinkedList<>();
-        for(int[] interval : intervals){
-            if(merged.isEmpty() || merged.getLast()[1] < interval[0]) {
-                merged.add(interval);
+      int max = 0;
+        for (int i = 0; i < intervals.length; i++) {
+            max = Math.max(intervals[i][0], max);
+        }
+
+        int[] mp = new int[max + 1];
+        for (int i = 0; i < intervals.length; i++) {
+            int start = intervals[i][0];
+            int end = intervals[i][1];
+            mp[start] = Math.max(end + 1, mp[start]);
+        }
+
+        int r = 0;
+        int have = -1;
+        int intervalStart = -1;
+        for (int i = 0; i < mp.length; i++) {
+            if (mp[i] != 0) {
+                if (intervalStart == -1) intervalStart = i;
+                have = Math.max(mp[i] - 1, have);
             }
-            else{
-                merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
+            if (have == i) {
+                intervals[r++] = new int[] { intervalStart, have };
+                have = -1;
+                intervalStart = -1;
             }
         }
 
+        if (intervalStart != -1) {
+            intervals[r++] = new int[] { intervalStart, have };
+        }
+        if (intervals.length == r) {
+            return intervals;
+        }
 
-        return merged.toArray(new int[merged.size()][]);
+        int[][] res = new int[r][];
+        for (int i = 0; i < r; i++) {
+            res[i] = intervals[i];
+        }
+
+        return res;
     }
 }
