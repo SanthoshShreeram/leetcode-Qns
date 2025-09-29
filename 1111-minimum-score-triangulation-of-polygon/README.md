@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/minimum-score-triangulation-of-polygon">Minimum Score Triangulation of Polygon</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You have a convex <code>n</code>-sided polygon where each vertex has an integer value. You are given an integer array <code>values</code> where <code>values[i]</code> is the value of the <code>i<sup>th</sup></code> vertex in <strong>clockwise order</strong>.</p>
+<p>You have a convex <code>n</code>-sided polygon where each vertex has an integer value. You are given an integer array <code>values</code> where <code>values[i]</code> is the value of the <code>i<sup>th</sup></code> vertex in <strong>clockwise order</strong>.</p>
 
 <p><strong>Polygon</strong> <strong>triangulation</strong> is a process where you divide a polygon into a set of triangles and the vertices of each triangle must also be vertices of the original polygon. Note that no other shapes other than triangles are allowed in the division. This process will result in <code>n - 2</code> triangles.</p>
 
@@ -10,7 +10,7 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<p><img alt="" src="http://127.0.0.1:49174/shape1.jpg" /></p>
+<p><strong class="example"><img alt="" src="https://assets.leetcode.com/uploads/2025/10/23/ex0-2.png" style="width: 200px; height: 200px;" /></strong></p>
 
 <div class="example-block">
 <p><strong>Input:</strong> <span class="example-io">values = [1,2,3]</span></p>
@@ -22,9 +22,9 @@
 
 <p><strong class="example">Example 2:</strong></p>
 
-<p><img alt="" src="http://127.0.0.1:49174/shape2.jpg" /></p>
-
 <div class="example-block">
+<p><img alt="" src="https://assets.leetcode.com/uploads/2025/10/23/ex1-2.png" style="width: 432px; height: 200px;" /></p>
+
 <p><strong>Input:</strong> <span class="example-io">values = [3,7,4,5]</span></p>
 
 <p><strong>Output:</strong> <span class="example-io">144</span></p>
@@ -35,7 +35,7 @@ The minimum score is 144.</p>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<p><img alt="" src="http://127.0.0.1:49174/shape3.jpg" /></p>
+<p><strong class="example"><img alt="" src="https://assets.leetcode.com/uploads/2025/10/23/ex2.png" style="width: 200px; height: 200px;" />​​​​​​​</strong></p>
 
 <div class="example-block">
 <p><strong>Input:</strong> <span class="example-io">values = [1,3,1,4,1,5]</span></p>
