@@ -3,7 +3,7 @@ class Solution {
         int operations = 0;
         while(true){
             int min = Integer.MAX_VALUE;
-            for (int num: nums){
+            for(int num: nums){
                 if(num > 0 && num < min){
                     min = num;
                 }
